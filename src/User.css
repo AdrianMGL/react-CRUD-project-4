@@ -1,0 +1,349 @@
+.users__header {
+  background-color: var(--color-secondary-green);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper__form {
+  background-color: rgb(250, 250, 250);
+  margin: 2rem 0.74rem;
+  padding: 0.5rem 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  margin: 1.5rem 2rem;
+  color: var(--color-secondary-green);
+}
+
+.wrapper__form .title {
+  text-align: center;
+}
+
+form .input {
+  padding: 0.1rem 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  background-color: rgb(240, 240, 240);
+  padding: 0.45rem 1rem;
+  margin: 0.5rem 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid transparent;
+}
+
+label i {
+  color: var(--color-quinary-gray);
+}
+
+label i:hover {
+  color: var(--color-secondary-green);
+}
+
+button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+button i {
+  margin-left: 0.15rem;
+}
+
+.group__btn-register {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 1rem 0.15rem;
+  padding-inline: 1.5rem;
+}
+
+.btn {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.success {
+  border: 1px solid var(--color-secondary-green);
+  background-color: transparent;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+}
+
+.success:hover {
+  color: var(--color-white);
+  background-color: var(--color-secondary-green);
+}
+
+.edit {
+  background-color: transparent;
+  border: 1px solid var(--color-quaternary-yellow);
+  margin-right: 0.25rem;
+}
+
+.edit:hover {
+  background-color: var(--color-quaternary-yellow);
+  color: var(--color-white);
+}
+
+.delete {
+  border: 1px solid var(--color-tertiary-pink);
+  background-color: transparent;
+}
+
+.delete:hover {
+  background-color: var(--color-tertiary-pink);
+  color: var(--color-white);
+}
+
+.clean {
+  margin: 0.5rem;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.card {
+  background-color: rgb(250, 250, 250);
+  margin: 1rem 0.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card:hover {
+  box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.35);
+  background-color: rgb(255, 255, 255);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  min-height: 20rem;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom,
+    hsla(209, 73%, 52%, 0.2),
+    hsla(210, 43%, 41%, 0.1)
+  );
+  clip-path: circle(8rem at 99% 20%);
+}
+
+.card .card__header {
+  position: relative;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img__header img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--color-primary-blue);
+}
+
+.card__body {
+  display: grid;
+  gap: 0.45rem;
+  margin-block: 1rem;
+  position: relative;
+}
+
+.card__body h5 {
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.card__body i {
+  margin-right: 0.3rem;
+  color: var(--color-quinary-gray);
+}
+
+.card__body i:hover {
+  color: var(--color-primary-blue);
+}
+
+.card__footer {
+  position: relative;
+}
+
+.group__btn-list {
+  padding-top: 0.15rem;
+  display: flex;
+  justify-content: center;
+}
+
+.group__btn-list button {
+  width: 100%;
+  padding: 0.35rem;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 575.98px) {
+  input {
+    padding: 0.5rem 1rem;
+  }
+
+  .card {
+    margin: 1.2rem;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 767.98px) {
+  .main {
+    margin-inline: 1rem;
+  }
+
+  form .input {
+    padding: 0.1rem 3rem;
+  }
+
+  input {
+    padding: 0.65rem 1rem;
+  }
+
+  .success {
+    width: 50%;
+  }
+
+  .clean {
+    width: 50%;
+  }
+
+  .wrapper__list {
+    column-gap: 0.1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    margin: 0.5rem;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 849.98px) {
+  .wrapper__form {
+    margin: 3rem 0.74rem;
+  }
+
+  form .input {
+    padding: 0.1rem 1.5rem;
+  }
+
+  .main {
+    display: unset;
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+    justify-content: center;
+  }
+
+  .wrapper__list {
+    margin: 2.5rem 0;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 991.98px) {
+  .main {
+    grid-template-columns: 0.5fr 1fr;
+  }
+
+  .card__header {
+    border-radius: unset;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card__body {
+    display: grid;
+    gap: 0.35rem;
+    padding: 0.1rem;
+    width: 80%;
+    margin: 0.25rem;
+  }
+
+  .card__body h5 {
+    display: inline-flex;
+    width: 80%;
+  }
+
+  .card__footer {
+    align-self: flex-end;
+  }
+
+  .group__btn-list button {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 1199.98px) {
+  .main {
+    grid-template-columns: 0.4fr 1fr;
+    margin-inline: 1.5rem;
+  }
+
+  .wrapper__list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card::before {
+    clip-path: circle(9rem at 100% -10%);
+  }
+
+  .img__header img {
+    min-width: 100%;
+    border-radius: 50%;
+  }
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1399.98px) {
+  .main {
+    margin-inline: 2.5rem;
+  }
+}
